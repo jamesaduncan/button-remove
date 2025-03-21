@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button-remove Example</title>        
+        <script type="module" src="https://jamesaduncan.github.io/dom-inline-example/index.mjs"></script>
+    </head>
+    <body>
+        <h1>Button-remove example</h1>
+        <p>
+            Button-remove lets you declaratively add buttons to HTML documents that remove
+            elements from the document.
+        </p>
+        <p>
+            To use button-remove, first of all include the script in the body of your 
+            document.
+            <pre>&lt;script type="module" src="https://jamesaduncan.github.io/button-remove/index.mjs"&gt;&lt;/script&gt;</pre>
+        </p>
+        <p>
+            Then add the button to your document, providing a remove attribute with a removal method type,
+            and a selector as the target.
+        </p>
+        <p>
+            <section class="modify">
+                <inline-example include>
+                    <button remove="target" selector="section.modify">Remove paragraph</button>
+                </inline-example>
+                <p>Clicking the button removes this</p>
+            </section>
+            </p>
+        <p>
+            It's also possible to remove elements using the <code>closest</code> removal type. Clicking this button will remove
+            this paragraph.
+            <inline-example include>
+                <button remove="closest" selector="p">Remove the paragraph</button>
+            </inline-example>
+        </p>
+        <script type="module" src="./index.mjs"></script>
+    </body>
+</html>
